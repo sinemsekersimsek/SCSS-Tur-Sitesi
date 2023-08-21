@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Farklı dosyada yazdığımız scss style leri import ediyoruz*/
+@import '_header';
+@import '_navbar';
+@import '_events';
+@import '_explore';
+@import '_tours';
+@import '_footer';
+
+:root {
+    --primary-color: #fc036b;
+    --secondary-color: #484872;
+    --thirdy-color: #49497e;
+    --text-color: whitesmoke;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+h4 {
+    font-size: 4vmin;
+    color: var(--secondary-color);
+    margin: 24px auto;
+}
+
+p {
+    color: #7c7c7c;
+    width: 80%;
+
+
+
+}
+
+section {
+    width: 80%;
+    margin: 80px auto;
+}
+
+.btn {
+
+    background-color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: var(--text-color);
+}
+
+.btn:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+
+}
+
+
+img {
+    transition: transform .3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.line {
+    background-color: var(--primary-color);
+    width: 150px;
+    height: 5px;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.navbar-menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    width: 40px;
+    display: none;
+}
+
+/*Mevcut sayfadayken navbardaki yazının stili*/
+.active {
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*Ortak Yapıya sahip olduğu için buraya aldık*/
+
+.events-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+
+}
+
+
+/*Responsive */
+
+@media only screen and (max-width: 850px) {
+    .navbar {
+        padding: 0;
+
+        &-logo {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        &-links {
+            flex-direction: column;
+            width: 100%;
+
+            height: 100vh;
+            justify-content: center;
+            background: var(--secondary-color);
+            transition: all .5s ease;
+
+            margin-top: -900px;
+
+            li {
+                margin: 30px auto;
+            }
+
+        }
+
+        &-menu-btn {
+            display: block;
+        }
+    }
+
+    .mobile-menu {
+        border-bottom-right-radius: 200px;
+        margin-top: 0;
+    }
+
+    .events-row {
+        flex-direction: column;
+
+        &-col {
+            margin: 20px auto;
+        }
+    }
+
+
+    .explore-content {
+        width: 100%;
+    }
+
+    .tours {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 30px;
+
+        &-right {
+            .image-gallery {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+            }
+        }
+    }
+}

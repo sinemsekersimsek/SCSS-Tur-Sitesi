@@ -1,0 +1,39 @@
+.tours {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 100%;
+  // background-color: aqua;
+
+  &-left {
+    //  background-color: red;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .btn {
+      margin-top: 80px !important;
+    }
+  }
+
+  &-right {
+    // background-color: yellow;
+    width: 50%;
+    float: right;
+
+    img {
+      width: 250px;
+      height: 250px;
+      margin: 10px;
+    }
+
+    .image-gallery {
+      //  background-color: red;
+      width: 600px !important;
+    }
+  }
+}
